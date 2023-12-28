@@ -10,6 +10,7 @@ import { useContext, useEffect, useState } from "react";
 import VideoContext from "../context/VideoContext";
 import { options } from "../utils/apiInfo";
 import { useNavigate } from "react-router-dom";
+import YouTubeIcon from "@mui/icons-material/YouTube";
 
 const Navbar = () => {
 	const [formValue, setFormValue] = useState("");
@@ -28,11 +29,17 @@ const Navbar = () => {
 		setFormValue("");
 	};
 	return (
-		<nav className="  z-10 px-6 sm:px-8 flex items-center justify-between sm:pt-0 pt-6 fixed top-0 left-0 right-0 bg-primary ">
+		<nav className=" py-4 z-10 px-6 sm:px-8 flex items-center justify-between sm:pt-0 pt-6 fixed top-0 left-0 right-0 bg-primary ">
 			<div className="sm:flex items-center hidden flex-1 ">
 				<MenuIcon />
-				<Link to={"/"} onClick={() => setSearchTerm("")}>
-					<img className=" h-24 object-contain" src={Logo} alt="" />
+				<Link
+					className=" font-bold flex items-center"
+					to={"/"}
+					onClick={() => setSearchTerm("")}
+				>
+					<YouTubeIcon style={{ color: "red" }} />
+					MateenTube
+					{/* <img className=" h-24 object-contain" src={Logo} alt="" /> */}
 				</Link>
 			</div>
 			{/*  */}
