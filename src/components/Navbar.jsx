@@ -74,7 +74,7 @@ const Navbar = () => {
 				/>
 				<Avatar style={{ height: "32px", width: "32px" }} />
 			</div>
-			{/* testing number 2 */}
+			{/* testing number 2123123 */}
 		</nav>
 	);
 };
